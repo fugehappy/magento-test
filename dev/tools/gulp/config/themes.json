@@ -1,0 +1,13 @@
+{
+  "designa": {
+    "src": "app/design/frontend/Silk/designa",
+    "dest": "pub/static/frontend/Silk/designa",
+    "locale": [
+      "en_US"
+    ],
+    "postcss": [
+      "plugins.autoprefixer()"
+    ],
+    "disableSuffix": true
+  }
+}

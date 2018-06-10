@@ -1,0 +1,9 @@
+{
+  "proxy": "dev.designa.cn",
+  "rewriteRules": [
+    {
+      "match": ".dev.designa.cn",
+      "replace": ""
+    }
+  ]
+}

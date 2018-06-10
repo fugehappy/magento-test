@@ -1,0 +1,4 @@
+{
+    "plugins": ["babel-plugin-transform-es2015-modules-amd"],
+    "presets": ["babel-preset-es2015"]
+}
