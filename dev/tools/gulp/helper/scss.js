@@ -33,8 +33,6 @@ module.exports = function(gulp, plugins, config, name, file) { // eslint-disable
     dest.push(config.projectPath + theme.dest + '/' + locale);
   });
 
-  console.log(dest);
-
   return gulp.src(
     file || srcBase + '/**/*.scss',
     { base: srcBase }
@@ -57,7 +55,7 @@ module.exports = function(gulp, plugins, config, name, file) { // eslint-disable
     .pipe(plugins.if(production && !disableSuffix, plugins.rename({ suffix: '.min' })))
     .pipe(plugins.rename(adjustDestinationDirectory))
     .pipe(plugins.multiDest(dest))
-    // // .pipe(plugins.base64())
+    // .pipe(plugins.base64())
     .pipe(plugins.logger({
       display   : 'name',
       beforeEach: 'Theme: ' + name + ' ',
