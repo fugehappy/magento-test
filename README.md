@@ -1,0 +1,5 @@
+# magento-test
+
+theme
+
+gulp
