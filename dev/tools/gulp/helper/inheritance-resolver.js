@@ -1,6 +1,7 @@
 'use strict';
 module.exports = function(plugins, config, name, tree = true) { // eslint-disable-line func-names
   const path = require('path');
+  const isWin = /win/.test(process.platform);
 
   function createSymlink(srcPath, destPath) {
     plugins.fs.removeSync(destPath);
@@ -14,7 +15,7 @@ module.exports = function(plugins, config, name, tree = true) { // eslint-disabl
     ).forEach(srcPath => {
       createSymlink(
         srcPath,
-        path.join(dest, srcPath).replace(/\\/g, '/').replace(src + '/', replacePattern + '')
+        path.join(dest, srcPath).replace(/\\/g, '/').replace(src + '/', replacePattern + isWin ? '' : '/')
       );
     });
   }
